@@ -87,3 +87,16 @@ $menu-link-active-border: $black;
 $topBar-bg: $grayMedium;
 $topBar-link: $white;
 $topBar-link-hover: $orange;
+
+// animations
+
+$bg-transition: 0.25s;
+$text-transition: 0.25s;
+
+%animation {
+  transition-property: background-color, color;
+  transition-duration: $bg-transition, $text-transition, 1s;
+  transition-timing-function: ease-out;
+  &:hover {
+  }
+}
