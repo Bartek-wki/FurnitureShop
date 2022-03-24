@@ -76,8 +76,13 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
+<<<<<<< HEAD
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
               <div key={item.id} className='col-12 col-md-6 col-lg-3'>
+=======
+            {categoryProducts.slice(activePage * productsPerPage, (activePage + 1) * productsPerPage).map(item => (
+              <div key={item.id} className='col-lg-3 col-sm-6'>
+>>>>>>> 5d2b227 (RWD mode)
                 <ProductBox {...item} />
               </div>
             ))}
@@ -107,6 +112,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  mode: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {

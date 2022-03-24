@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './redux/store';
-
 import './styles/bootstrap.scss';
 import './styles/global.scss';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import React from 'react';
+import store from './redux/store';
+import { Provider } from 'react-redux';
 
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
