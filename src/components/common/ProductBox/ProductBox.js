@@ -2,13 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faStar,
-  faExchangeAlt,
-  faShoppingBasket,
-} from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import Stars from '../Stars/Stars';
 
 const ProductBox = ({
   name,
@@ -16,10 +13,16 @@ const ProductBox = ({
   promo,
   stars,
   image,
+  category,
   addToFavorites,
   removeFromFavorites,
   id,
   favorites,
+  myStars,
+  addToCompare,
+  compare,
+  compareActive,
+  addActiveClass,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -34,17 +37,7 @@ const ProductBox = ({
     </div>
     <div className={styles.content}>
       <h5>{name}</h5>
-      <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
-          <a key={i} href='#'>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
-          </a>
-        ))}
-      </div>
+      <Stars stars={stars} myStars={myStars} id={id} />
     </div>
     <div className={styles.line}></div>
     <div className={styles.actions}>
@@ -59,7 +52,17 @@ const ProductBox = ({
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
+        <Button
+          className={compareActive ? styles.active : styles.outlines}
+          variant='outline'
+          onClick={e => {
+            e.preventDefault();
+            if (compare.length < 4 && compareActive === false) {
+              addActiveClass({ id });
+              addToCompare({ id, name, category, price, image, stars });
+            }
+          }}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -84,6 +87,12 @@ ProductBox.propTypes = {
   addToFavorites: PropTypes.func,
   removeFromFavorites: PropTypes.func,
   id: PropTypes.string,
+  myStars: PropTypes.number,
+  addToCompare: PropTypes.func,
+  compare: PropTypes.array,
+  compareActive: PropTypes.bool,
+  addActiveClass: PropTypes.func,
+  category: PropTypes.string,
 };
 
 export default ProductBox;
