@@ -29,7 +29,6 @@ const ProductBox = ({
   myStars,
   addToCompare,
   compare,
-  isHovered,
   compareActive,
   addActiveClass,
   updateInitialState,
@@ -52,11 +51,7 @@ const ProductBox = ({
   }, [id, myFovorite, updateInitialState]);
 
   return (
-    <div
-      className={styles.root}
-      onMouseEnter={() => isHovered(true)}
-      onMouseLeave={() => isHovered(false)}
-    >
+    <div className={styles.root}>
       <div className={styles.photo}>
         <Link to={`/product/${id}`}>
           <img src={image} alt='lux bed' />
@@ -65,10 +60,12 @@ const ProductBox = ({
         <div
           className={`${styles.buttons} ${viewPromoted ? styles.hotDealButtons : null}`}
         >
-          {!viewPromoted ? <Button variant='small'>Quick View</Button> : null}
-          <Button variant='small' onClick={handleShowProdPopup}>
-            Quick View
-          </Button>
+          {viewPromoted ? <Button variant='small'>Quick View</Button> : null}
+          {!viewPromoted ? (
+            <Button variant='small' onClick={handleShowProdPopup}>
+              Quick View
+            </Button>
+          ) : null}
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
