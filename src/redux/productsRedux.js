@@ -49,7 +49,6 @@ export const updateInitialState = payload => ({
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_TO_FAVORITES:
-      console.log(action.payload);
       return statePart.map(product => {
         if (product.id === action.payload.id) {
           product.favorites = true;
