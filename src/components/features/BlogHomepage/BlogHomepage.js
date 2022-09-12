@@ -21,15 +21,15 @@ const BlogHomepage = () => {
             <div className={'col-2 ' + styles.dots}>
               <ul>
                 <li>
-                  <a className={styles.active} href='#'>
+                  <a className={styles.active} href='/'>
                     {' '}
                   </a>
                 </li>
                 <li>
-                  <a href='#'> </a>
+                  <a href='\'> </a>
                 </li>
                 <li>
-                  <a href='#'> </a>
+                  <a href='/'> </a>
                 </li>
               </ul>
             </div>

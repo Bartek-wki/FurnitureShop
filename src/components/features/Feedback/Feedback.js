@@ -20,13 +20,15 @@ const Feedback = () => {
             <div className={'col-auto ' + styles.dots}>
               <ul>
                 <li>
-                  <a className={styles.active}>page</a>
+                  <a href='/' className={styles.active}>
+                    page
+                  </a>
                 </li>
                 <li>
-                  <a>page</a>
+                  <a href='/'>page</a>
                 </li>
                 <li>
-                  <a>page</a>
+                  <a href='/'>page</a>
                 </li>
               </ul>
             </div>

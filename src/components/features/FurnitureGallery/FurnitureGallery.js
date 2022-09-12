@@ -78,7 +78,7 @@ const FurnitureGallery = () => {
               <ul className='row'>
                 <li className='col'>
                   <a
-                    href='#'
+                    href='/'
                     onClick={() => {
                       handleCategoryChange('featured');
                       setActivTab('featured');
@@ -92,7 +92,7 @@ const FurnitureGallery = () => {
                 </li>
                 <li className='col'>
                   <a
-                    href='#'
+                    href='/'
                     onClick={() => {
                       handleCategoryChange('topSeller');
                       setActivTab('topSeller');
@@ -106,7 +106,7 @@ const FurnitureGallery = () => {
                 </li>
                 <li className='col'>
                   <a
-                    href='#'
+                    href='/'
                     onClick={() => {
                       handleCategoryChange('saleOff');
                       setActivTab('saleOff');
@@ -120,7 +120,7 @@ const FurnitureGallery = () => {
                 </li>
                 <li className='col'>
                   <a
-                    href='#'
+                    href='/'
                     onClick={() => {
                       handleCategoryChange('topRated');
                       setActivTab('topRated');

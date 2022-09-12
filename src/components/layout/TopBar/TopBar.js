@@ -14,17 +14,17 @@ const TopBar = () => (
         <div className={`col text-left ${styles.topOptions}`}>
           <ul>
             <li>
-              <a href='#'>
+              <a href='/'>
                 USD <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='/'>
                 English <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='/'>
                 Help <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
               </a>
             </li>
@@ -45,7 +45,7 @@ const TopBar = () => (
               </Link>
             </li>
             <li>
-              <a href='#'>
+              <a href='/'>
                 <FontAwesomeIcon className={styles.icon} icon={faBars} />
               </a>
             </li>

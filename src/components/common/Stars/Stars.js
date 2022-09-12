@@ -25,6 +25,7 @@ const Stars = ({ stars, myStars, id }) => {
     <div className={styles.stars}>
       {[1, 2, 3, 4, 5].map(i => (
         <a
+          href='/'
           key={i}
           id={i}
           onMouseEnter={e => {

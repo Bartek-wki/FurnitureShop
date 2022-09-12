@@ -48,13 +48,13 @@ const Register = () => {
               <label className='col-auto d-flex align-items-center mt-4'>
                 <input type='checkbox' />
                 <span className='ml-1'>
-                  I accept the<a href='#'>terms and conditions.</a>
+                  I accept the<a href='/'>terms and conditions.</a>
                 </span>
               </label>
               <label className='col-auto d-flex align-items-center'>
                 <input type='checkbox' />
                 <span className='ml-1'>
-                  I consent to the processing of my<a href='#'>personal data.</a>
+                  I consent to the processing of my<a href='/'>personal data.</a>
                 </span>
               </label>
               <div className='d-flex justify-content-center mt-4'>

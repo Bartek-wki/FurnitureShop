@@ -24,7 +24,7 @@ class Promoted extends React.Component {
             </div>
           ),
           customPaging: () => {
-            return <a> </a>;
+            return <a href='/'> </a>;
           },
           afterChange: index => {
             const activeDot = document.querySelectorAll(`.${styles.sliderdots} li`)[

@@ -85,7 +85,7 @@ const Login = () => {
             </form>
             <div className='col-12 d-flex flex-column justify-content-center'>
               <span className='mt-5 text-center'>
-                <a href='#'>Forgot password?</a>
+                <a href='/login'>Forgot password?</a>
               </span>
               <span className='mt-3 text-center'>
                 <Link to={'/register'}>Register</Link>

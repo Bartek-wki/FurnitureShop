@@ -67,10 +67,9 @@ const MenuBar = ({ children }) => {
               >
                 blog
               </NavLink>
-
             </ul>
           </div>
-          <a href='#' className={styles.dropdown} onClick={() => setOpen(!open)}>
+          <a href='/' className={styles.dropdown} onClick={() => setOpen(!open)}>
             <FontAwesomeIcon icon={faBars} />
           </a>
         </div>
